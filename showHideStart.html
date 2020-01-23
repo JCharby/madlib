@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+
+ <head>
+   <meta charset="utf-8">
+   <title>start</title>
+   <style media="screen">
+     * {
+       border: 1px solid red;
+     }
+
+     body {
+       background-color: rgb(205, 142, 86);
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       justify-content: center;
+       color: rgb(33, 50, 111);
+       font-family: sans-serif;
+     }
+
+     div {
+       padding: 2em;
+       background-color: rgb(65, 140, 237);
+       width: 60%;
+       /* margin-bottom: 1em; */
+     }
+
+     p {
+       padding: 1em;
+       font-size: 2em;
+       background-color: rgb(57, 218, 152);
+     }
+
+     button {
+       background-color: rgb(169, 26, 181);
+       color: inherit;
+       width: 30%;
+       font-size: 1.5em;
+       border-radius: 2em;
+       padding: 0.5em;
+       margin-top: 1em;
+     }
+
+     input {
+       font-size: inherit;
+     }
+
+     .displayBlock {
+       display: block;
+     }
+
+     .displayNone {
+       display: none;
+     }
+   </style>
+ </head>
+
+ <body>
+   <div id="mainPanel">
+     <p class="firstP">This is a paragraph.</p>
+   </div>
+   <button type="button" name="button" id="showHide">Invisibility Cloak?</button>
+
+   <script type="text/javascript">
+     //classname vs classlist
+     //https://developer.mozilla.org/en-US/docs/Web/API/Element/className
+     //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+     let mainPanel = document.querySelector('#mainPanel')
+     // mainPanel.className = "displayNone"
+     let showHide = document.querySelector('#showHide')
+     showHide.addEventListener('click', changeClass, false)
+
+     function changeClass() {
+
+       if (mainPanel.className == 'displayNone') {
+         mainPanel.className = 'displayBlock'
+       } else {
+         mainPanel.className = 'displayNone'
+       }
+     }
+   </script>
+ </body>
+
+ </html>

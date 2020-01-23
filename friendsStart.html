@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  <title>start</title>
+  <style media="screen">
+    *{
+      border: 1px solid red;
+    }
+    body {
+      background-color: rgb(205, 142, 86);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      color: rgb(33, 50, 111);
+    }
+    div {
+      padding: 2em;
+      background-color: rgb(65, 140, 237);
+      width: 60%;
+      /* margin-bottom: 1em; */
+    }
+    p {
+      padding: 1em;
+      font-size: 2em;
+      background-color: rgb(57, 218, 152);
+    }
+    button {
+      background-color: rgb(169, 26, 181);
+      color: inherit;
+      width: 30%;
+      font-size: 1.5em;
+      border-radius: 2em;
+      padding: 0.5em;
+      margin-top: 1em;
+    }
+    input {
+      font-size: inherit;
+    }
+    .displayBlock { display: block;}
+    .displayNone { display: none;}
+  </style>
+  </head>
+  <body>
+    <div id="mainPanel">
+      <p class="secondP">What is your NAME?
+      <input type="text" class = "formName" name="" value="" placeholder="Name?">
+      </p>
+      <p class="answer"></p>
+    </div>
+    <button type="button" name="button" id = "formStuff">Friends?</button>
+    <script type="text/javascript">
+    let formName = document.querySelector('.formName')
+
+    let answer = document.querySelector('.answer')
+    answer.className = 'displayNone'
+
+    let formStuff = document.querySelector('#formStuff')
+    formStuff.addEventListener('click',processForm,false)
+
+    function processForm(){
+      answer.className = 'displayBlock'
+      let formNameText = formName.value
+      answer.textContent = "welcome, "
+      answer.textContent += formNameText
+      answer.textContent += ". Are we friends?"
+    }
+    
+
+
+    </script>
+
+  </body>
+</html>

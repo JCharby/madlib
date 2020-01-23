@@ -1,0 +1,92 @@
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>start</title>
+  <style media="screen">
+    *{
+      border: 1px solid red;
+    }
+    body {
+      background-color: rgb(205, 142, 86);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      color: rgb(33, 50, 111);
+      font-family: sans-serif;
+    }
+    div {
+      padding: 2em;
+      background-color: rgb(65, 140, 237);
+      width: 60%;
+      /* margin-bottom: 1em; */
+    }
+    p {
+      padding: 1em;
+      font-size: 2em;
+      background-color: rgb(57, 218, 152);
+    }
+    button {
+      background-color: rgb(169, 26, 181);
+      color: inherit;
+      width: 30%;
+      font-size: 1.5em;
+      border-radius: 2em;
+      padding: 0.5em;
+      margin-top: 1em;
+    }
+    input {
+      font-size: inherit;
+    }
+    .displayBlock { display: block;}
+    .displayNone { display: none;}
+    #warning { background-color: red;}
+  </style>
+</head>
+
+<body>
+  <div id="inputPanel">
+    <h3>A few questions for you</h3>
+    <p>A first name:
+      <input id="firstName" type="text" placeholder="first name">
+    </p>
+    <p>Your favorite color:
+      <input id="favColor" type="text" placeholder="favorite color">
+    </p>
+    <p>Somewhere to visit:
+      <input id="place" type="text" placeholder="place">
+    </p>
+    <button id="submit">Submit your answers</button>
+    <p id="warning">Please answer all questions.</p>
+
+  </div>
+  <div id="outputPanel">
+    <p>Your story....</p>
+    <p id="theStory">junk</p>
+    <button id="again">Again?</button>
+  </div>
+  <script>
+  //variables to hold references to markup elements
+
+  //button event listeners
+
+  //action functions
+    function checkComplete() {
+      //verify the user filled in the form
+
+    }
+
+    function writeStory() {
+      //grab the input values to write the story
+
+    }
+
+    function resetPage() {
+      //put stuff here to reset the page so the user can try again
+
+    }
+  </script>
+</body>
+
+</html>
